@@ -9,7 +9,7 @@ const EMAIL_VALIDO = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 // La contraseña debe tener 8+ caracteres, al menos una letra y un número.
 function validarPassword(password) {
-  if (typeof password !== "string" || password.length <= 8) {
+  if (typeof password !== "string" || password.length < 8) {
     return "La contraseña debe tener al menos 8 caracteres";
   }
   if (!/[A-Za-z]/.test(password) || !/\d/.test(password)) {
