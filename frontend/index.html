@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login Rosa</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="tarjeta">
+      <div class="logo" aria-hidden="true">🌸</div>
+
+      <!-- Vista: login / registro -->
+      <section id="vista-acceso">
+        <h1 id="titulo">¡Hola de nuevo!</h1>
+        <p class="sub" id="subtitulo">Inicia sesión para continuar</p>
+
+        <form id="formulario" novalidate>
+          <label id="campo-nombre" hidden>
+            Nombre
+            <input name="nombre" type="text" autocomplete="name" placeholder="Tu nombre" />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required />
+          </label>
+          <label>
+            Contraseña
+            <input name="password" type="password" autocomplete="current-password" placeholder="••••••••" required />
+          </label>
+          <p class="mensaje" id="mensaje" role="alert"></p>
+          <button type="submit" id="boton">Entrar</button>
+        </form>
+
+        <p class="cambiar">
+          <span id="texto-cambiar">¿No tienes cuenta?</span>
+          <button type="button" class="enlace" id="cambiar">Regístrate</button>
+        </p>
+        <p class="pista">Demo: <b>rosa@demo.com</b> / <b>Rosa1234</b></p>
+      </section>
+
+      <!-- Vista: sesión iniciada -->
+      <section id="vista-bienvenida" hidden>
+        <h1>¡Bienvenida, <span id="nombre-usuario"></span>! 💖</h1>
+        <p class="sub" id="email-usuario"></p>
+        <button type="button" id="salir">Cerrar sesión</button>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

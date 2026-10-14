@@ -1,0 +1,14 @@
+{
+  "name": "login-rosa-backend",
+  "version": "1.0.0",
+  "description": "Backend del mini login rosa (Node.js + SQLite nativo, sin dependencias)",
+  "main": "src/server.js",
+  "private": true,
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,124 @@
+:root {
+  --rosa-fondo: #ffe4ef;
+  --rosa-claro: #fff5f9;
+  --rosa: #ff6fa8;
+  --rosa-fuerte: #e0457f;
+  --texto: #5a2340;
+  --error: #c62828;
+  --ok: #2e7d32;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--texto);
+  background: radial-gradient(circle at top left, #ffc2db, transparent 50%),
+    radial-gradient(circle at bottom right, #ffd6e8, transparent 50%), var(--rosa-fondo);
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 380px;
+  padding: 32px 28px;
+  background: var(--rosa-claro);
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(224, 69, 127, 0.25);
+  text-align: center;
+}
+
+.logo {
+  font-size: 48px;
+}
+
+h1 {
+  margin: 8px 0 4px;
+  font-size: 1.6rem;
+}
+
+.sub {
+  margin: 0 0 24px;
+  opacity: 0.75;
+}
+
+form {
+  display: grid;
+  gap: 14px;
+  text-align: left;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+input {
+  padding: 12px 14px;
+  border: 2px solid #ffc2db;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: white;
+  color: var(--texto);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--rosa);
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, var(--rosa), var(--rosa-fuerte));
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+button.enlace {
+  padding: 0;
+  background: none;
+  color: var(--rosa-fuerte);
+  text-decoration: underline;
+}
+
+.mensaje {
+  min-height: 1.2em;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--error);
+}
+
+.mensaje.ok {
+  color: var(--ok);
+}
+
+.cambiar {
+  margin: 20px 0 8px;
+}
+
+.pista {
+  margin: 0;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+[hidden] {
+  display: none !important;
+}
